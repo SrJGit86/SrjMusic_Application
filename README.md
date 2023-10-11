@@ -1,6 +1,6 @@
 # SrJ Music - Online Music Player
 
-Welcome to SrJ Music, a web application for music enthusiasts! This web app allows users to explore and enjoy a collection of great music. Whether you're into classic melodies or the latest hits, SrJ Music has something for everyone.
+Welcome to SrJ Music, a web application for music enthusiasts! This web app allows users to explore and enjoy a collection of great music. Whether you're into classic melodies, SrJ Music has something for everyone.
 
 ## Features
 - Play a collection of handpicked songs.
