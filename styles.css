@@ -1,0 +1,351 @@
+    @import url('https://fonts.googleapis.com/css2?family=Gabarito&family=Young+Serif&display=swap');
+    body {
+        background-color: antiquewhite;
+        font-family: 'Gabarito', cursive;
+        /* overflow: hidden; */
+    }
+    
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+        background-color: rgb(22, 22, 22);
+        color: white;
+        /* position: fixed;
+        width: 100%; */
+    }
+    
+    .logo {
+        display: flex;
+        align-items: center;
+        width: 50%;
+    }
+    
+    .logo img {
+        border-radius: 100%;
+        width: 38px;
+        height: 38px;
+        rotate: -30deg;
+    }
+    
+    .logo span {
+        font-size: 1.8rem;
+        font-weight: 600;
+        font-family: 'Young Serif', serif;
+        color: lightgoldenrodyellow;
+        letter-spacing: 2px;
+        margin: 0 0.5rem;
+    }
+    
+    .navOpt {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .navOpt a {
+        text-decoration: none;
+        /* font-family: 'Gabarito', cursive; */
+        color: white;
+    }
+    /* .container {
+        height: 72vh;
+        overflow-y: auto;
+        scrollbar-color: rgb(22, 22, 22);
+        background-color: rgb(22, 22, 22);
+        width: 80%;
+        margin: 1rem auto 0 auto;
+        border-radius: 12px 16px 0 0;
+    } */
+    
+    .container {
+        /* min-height: 72vh; */
+        height: 72vh;
+        overflow-y: auto;
+        scrollbar-color: rgb(22, 22, 22);
+        background-color: rgb(22, 22, 22);
+        width: 80%;
+        margin: 1rem auto 0 auto;
+        border-radius: 12px 16px 0 0;
+        display: flex;
+        position: relative;
+    }
+    
+    .container::-webkit-scrollbar {
+        width: 12px;
+    }
+    
+    .container::-webkit-scrollbar-thumb {
+        background-color: gray;
+        border-radius: 6px;
+    }
+    
+    .container::-webkit-scrollbar-track {
+        background-color: rgb(0, 0, 0);
+        border-radius: 0 30px 0 0;
+    }
+    
+    .songsList {
+        padding: 1rem;
+        width: 50%;
+    }
+    
+    .headLine {
+        color: lightgoldenrodyellow;
+        font-size: 2rem;
+        /* color: rgb(205, 30, 30); */
+        letter-spacing: 2px;
+        /* font-family: 'Young Serif', serif; */
+    }
+    
+    #currentSongBigCover {
+        width: 50%;
+        background-color: rgb(22, 22, 22);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        color: lightgoldenrodyellow;
+        position: relative;
+    }
+    
+    #currentSongBigCover img {
+        /* width: 70%; */
+        /* height: 80%; */
+        position: fixed;
+    }
+    
+    #currentSongBigCover span {
+        /* position: absolute; */
+        position: fixed;
+        top: 10rem;
+        font-size: 1.5rem;
+        text-wrap: wrap;
+    }
+    
+    @media((min-width:810px) and (max-width:1030px)) {
+        #currentSongBigCover span {
+            font-size: 1.2rem;
+        }
+        .dura_playbtn {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    
+    @media((max-width:810px)) {
+        #currentSongBigCover {
+            display: none;
+        }
+        .songsList {
+            width: 100%;
+        }
+        .info {
+            font-size: 0.8rem;
+            margin-left: 0.5rem;
+        }
+        .bottom {
+            padding-top: 2rem;
+        }
+        .container {
+            background-image: url(./images/heaphone.avif);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        /* .about-section {
+            background-image: url(./images/heaphone.avif);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        } */
+        .about-section p {
+            /* background-color: red; */
+            font-size: 1rem;
+        }
+    }
+    
+    @media(max-width:500px) {
+        .logo {
+            width: 100%;
+        }
+        .songs {
+            font-size: 0.8rem;
+        }
+        .btns i {
+            font-size: 1.5rem;
+        }
+        .icons_songInfo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        #gif {
+            width: 100px;
+        }
+        .dura_playbtn {
+            display: flex;
+            flex-direction: column;
+        }
+        .headLine {
+            font-size: 1.2rem;
+        }
+        .about-section p {
+            /* background-color: red; */
+            font-size: 0.8rem;
+        }
+    }
+    
+    @media(max-width:335px) {
+        #gif {
+            padding-right: 1rem;
+            width: 70px;
+            height: 30px;
+        }
+        .about-section p {
+            /* background-color: red; */
+            font-size: 0.5rem;
+        }
+        nav {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.5rem;
+        }
+        .navOpt {
+            width: 100%;
+            /* margin-left: 5rem; */
+        }
+    }
+    
+    .songs {
+        width: 100%;
+        height: 3rem;
+        border-radius: 505;
+        background-color: lightgoldenrodyellow;
+        margin: 1rem 0;
+        display: flex;
+        justify-content: space-between;
+        /* text-align: center; */
+        align-items: center;
+        padding: 0.5rem;
+        border-radius: 25px;
+    }
+    
+    .dura_playbtn {
+        /* background-color: brown; */
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.3rem;
+        /* padding: 0 0.2rem; */
+        /* border-radius: 1rem; */
+    }
+    
+    .songs img {
+        width: 10%;
+        height: 100%;
+        border-radius: 100%;
+    }
+    
+    .perticularSongsPlay {
+        cursor: pointer;
+    }
+    
+    .bottom {
+        position: sticky;
+        bottom: 0;
+        height: 100px;
+        padding-top: 0.5rem;
+        border-top: 1px solid antiquewhite;
+        background-color: rgb(22, 22, 22);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .timestampCurrSong {
+        /* margin: 0.8rem 0; */
+        color: white;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .icons_songInfo {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0.8rem 0;
+    }
+    
+    #songProgress {
+        width: 80%;
+        cursor: pointer;
+    }
+    
+    .btns {
+        font-size: 0.7rem;
+        color: lightgoldenrodyellow;
+        display: flex;
+        gap: 0.5rem;
+    }
+    
+    .btns i {
+        cursor: pointer;
+    }
+    
+    .info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .info img {
+        border-radius: 50%;
+        opacity: 0;
+        transition: opacity 0.4s ease-in;
+    }
+    
+    #currentSong {
+        color: lightgoldenrodyellow;
+    }
+    /* .aboutBody {
+        background-image: url(./images/aboutBack.webp);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    } */
+    
+    .about-section {
+        width: 80%;
+        margin: 1rem auto;
+        padding: 1rem;
+        background-color: rgb(0, 0, 0);
+        height: 90vh;
+        border-radius: 20px;
+    }
+    
+    .about-section h2 {
+        color: brown;
+    }
+    
+    .about-section p {
+        padding: 1rem 1rem 0 1rem;
+        color: lightgoldenrodyellow;
+    }
